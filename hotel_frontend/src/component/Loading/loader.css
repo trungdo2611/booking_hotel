@@ -1,0 +1,39 @@
+/* Loader css */
+
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: .7;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998; /* Đảm bảo lớp phủ nằm trên cùng */
+}
+
+.loader span {
+    font-weight: bolder;
+    color: #000;
+    display: inline-block;
+    font-size: 4rem;
+}
+
+.loader-char {
+    display: inline-block;
+    font-size: 2rem; /* Kích thước chữ */
+    animation: bounce 0.7s infinite alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
